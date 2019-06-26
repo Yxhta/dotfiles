@@ -1,0 +1,51 @@
+##------------------------------
+## General
+##------------------------------
+
+# マウス操作を有効にする
+set-option -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+
+# キーストロークのディレイを減らす
+set -sg escape-time 1
+
+# | でペインを縦に分割する
+bind | split-window -h
+
+# - でペインを横に分割する
+bind - split-window -v
+
+# Disable sound bell
+set -g bell-action none
+set -g visual-bell off
+
+##------------------------------
+## Customize statusline
+##------------------------------
+
+# Length left
+set-option -g status-left-length 90
+set-option -g status-right-length 90
+
+# Contents left
+# set-option -g status-left 'tmux:[#P] #[fg=colour33](K) #(~/bin/kube-context)#[default] #[fg=colour1](G) #(~/bin/gcp-context 2>&1)#[default]'
+
+# Contents right
+set-option -g status-right '#[fg=white]#(~/.tmux/bin/wifi)#[default] #(~/.tmux/bin/battery --tmux) [%Y-%m-%d(%a) %H:%M]'
+
+# Reload statusbar
+set-option -g status-interval 1
+
+# Centerize
+set-option -g status-justify centre
+
+# Enable visual notification
+set-window-option -g monitor-activity on
+
+# Enable visual notification
+set-option -g visual-activity on
+
+# Enable statusbar top
+set-option -g status-position top
+

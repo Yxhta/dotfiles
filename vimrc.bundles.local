@@ -1,0 +1,13 @@
+Plug 'jparise/vim-graphql'
+Plug 'cocopon/iceberg.vim'
+Plug 'w0ng/vim-hybrid'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'mhartington/oceanic-next'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'editorconfig/editorconfig-vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
+
