@@ -1,6 +1,7 @@
 " Color scheme
 set background=dark
-colorscheme hybrid
+set termguicolors
+colorscheme iceberg
 
 " ビープ音をミュートする
 set belloff=all

@@ -2,7 +2,7 @@ Plug 'jparise/vim-graphql'
 "Plug 'mxw/vim-jsx'
 Plug 'cocopon/iceberg.vim'
 Plug 'w0ng/vim-hybrid'
-"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
