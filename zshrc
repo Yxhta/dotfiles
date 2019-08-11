@@ -34,9 +34,6 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
