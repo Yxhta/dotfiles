@@ -192,8 +192,3 @@ endif
 nnoremap <leader>o :Files<CR>
 nnoremap <leader>b :Buffer<CR>
 nnoremap <leader>h :History<CR>
-
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
