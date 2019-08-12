@@ -2,23 +2,24 @@ if &compatible
   set nocompatible
 end
 
-" Remove declared plugins
-function! s:UnPlug(plug_name)
-  if has_key(g:plugs, a:plug_name)
-    call remove(g:plugs, a:plug_name)
-  endif
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
 endfunction
-command!  -nargs=1 UnPlug call s:UnPlug(<args>)
 
 let g:has_async = v:version >= 800 || has('nvim')
 
 call plug#begin('~/.vim/bundle')
-
+call s:SourceConfigFilesIn('rcplugins')
 " Define bundles via Github repos
-Plug 'christoomey/vim-run-interactive'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'fatih/vim-go'
+" Plug 'christoomey/vim-run-interactive'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
 " Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
@@ -41,7 +42,8 @@ Plug 'cocopon/iceberg.vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'whatyouhide/vim-gotham'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'editorconfig/editorconfig-vim'
@@ -56,3 +58,5 @@ if g:has_async
 endif
 
 call plug#end()
+
+call s:SourceConfigFilesIn('rcfiles')

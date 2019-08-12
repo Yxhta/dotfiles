@@ -192,3 +192,6 @@ endif
 nnoremap <leader>o :Files<CR>
 nnoremap <leader>b :Buffer<CR>
 nnoremap <leader>h :History<CR>
+
+" clipboard
+set clipboard+=unnamed
