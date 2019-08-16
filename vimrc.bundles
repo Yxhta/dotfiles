@@ -53,9 +53,19 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'othree/yajs.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
-if g:has_async
-  Plug 'w0rp/ale'
-endif
+Plug 'w0rp/ale'
+let g:ale_linters = {
+      \ 'javascript': ['eslint']
+      \ }
+
+nmap <silent> [r <Plug>(ale_previous_wrap)
+nmap <silent> ]r <Plug>(ale_next_wrap)
+
+" Linting on all changes felt too aggressive. The below settings calls lint on
+" certain events, either when I stop interacting or when entering / leaving
+" insert mode
+set updatetime=1000
+let g:ale_lint_on_text_changed = 0
 
 call plug#end()
 
