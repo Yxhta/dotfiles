@@ -70,7 +70,7 @@ eval "$(hub alias -s)"
 export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+export FZF_DEFAULT_OPTS="--extended --ansi --multi --height 40% --reverse --border"
 
 # fbr - checkout git branch
 fbr() {
