@@ -40,14 +40,10 @@ _load_settings "$HOME/.zsh/configs"
 #================================================================
 #                    General
 #================================================================
+set IGNOREEOF
+
 export PATH="$HOME/.bin:$PATH"
-
-# rbenv
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
-# nodebrew
-#export PATH=$HOME/.nodebrew/current/bin:$PATH
+export ZSH=$HOME/.dotfiles
 
 # Language must be en_US
 export LANGUAGE=en_US.UTF-8
@@ -64,6 +60,14 @@ setopt no_beep
 
 # Load hub
 eval "$(hub alias -s)"
+
+# Better history
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
