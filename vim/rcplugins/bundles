@@ -1,3 +1,5 @@
+" Bundles.vim
+
 "call plug#begin('~/.vim/bundle')
 " Plug 'christoomey/vim-run-interactive'
 " Plug 'ctrlpvim/ctrlp.vim'
@@ -35,5 +37,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'othree/yajs.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'w0rp/ale'
 "call plug#end()
+
+" vim:ft=vim

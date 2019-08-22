@@ -1,0 +1,34 @@
+" ALE - asynchronous linting engine
+
+Plug 'w0rp/ale'
+
+let g:has_async = v:version >= 800 || has('nvim')
+
+" Ale
+let g:ale_linters = {
+      \ 'javascript': ['eslint'],
+      \ 'php': ['phpcs', 'php']
+      \ }
+
+nmap <silent> [r <Plug>(ale_previous_wrap)
+nmap <silent> ]r <Plug>(ale_next_wrap)
+
+" Linting on all changes felt too aggressive. The below settings calls lint on
+" certain events, either when I stop interacting or when entering / leaving
+" insert mode
+set updatetime=1000
+let g:ale_lint_on_text_changed = 0
+
+" ALE linting events
+augroup ale
+  autocmd!
+  autocmd VimEnter *
+    \ set updatetime=1000 |
+    \ let g:ale_lint_on_text_changed = 0
+  autocmd CursorHold * call ale#Queue(0)
+  autocmd CursorHoldI * call ale#Queue(0)
+  autocmd InsertEnter * call ale#Queue(0)
+  autocmd InsertLeave * call ale#Queue(0)
+augroup END
+
+" vim:ft=vim
