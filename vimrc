@@ -154,10 +154,10 @@ set splitbelow
 set splitright
 
 " Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-l> <C-w>l
 
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
@@ -175,7 +175,11 @@ set diffopt+=vertical
 
 " Color scheme
 set background=dark
+" if exists('+termguicolors')
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
+" endif
 colorscheme iceberg
 
 " Mute beep sound
@@ -198,5 +202,4 @@ nnoremap <leader>h :History<CR>
 
 " clipboard
 set clipboard+=unnamed
-
 

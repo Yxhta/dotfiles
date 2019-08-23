@@ -43,6 +43,7 @@ _load_settings "$HOME/.zsh/configs"
 set IGNOREEOF
 
 export PATH="$HOME/.bin:$PATH"
+export PATH=~/.composer/vendor/bin:$PATH
 export ZSH=$HOME/.dotfiles
 
 # Language must be en_US

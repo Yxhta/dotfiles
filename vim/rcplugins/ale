@@ -7,7 +7,7 @@ let g:has_async = v:version >= 800 || has('nvim')
 " Ale
 let g:ale_linters = {
       \ 'javascript': ['eslint'],
-      \ 'php': ['phpcs', 'php']
+      \ 'php': ['phpcs']
       \ }
 
 nmap <silent> [r <Plug>(ale_previous_wrap)
@@ -19,16 +19,14 @@ nmap <silent> ]r <Plug>(ale_next_wrap)
 set updatetime=1000
 let g:ale_lint_on_text_changed = 0
 
-" ALE linting events
-augroup ale
-  autocmd!
-  autocmd VimEnter *
-    \ set updatetime=1000 |
-    \ let g:ale_lint_on_text_changed = 0
-  autocmd CursorHold * call ale#Queue(0)
-  autocmd CursorHoldI * call ale#Queue(0)
-  autocmd InsertEnter * call ale#Queue(0)
-  autocmd InsertLeave * call ale#Queue(0)
-augroup END
+" Setting for PHP
+let g:ale_php_phpcs_executable = '/Users/ito/.composer/vendor/bin/phpcs'
+let g:ale_php_phpcs_standard = 'PSR2'
+let g:ale_php_phpcs_use_global = 1
+
+autocmd CursorHold * call ale#Queue(0)
+autocmd CursorHoldI * call ale#Queue(0)
+autocmd InsertEnter * call ale#Queue(0)
+autocmd InsertLeave * call ale#Queue(0)
 
 " vim:ft=vim
