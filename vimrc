@@ -13,6 +13,7 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set tw=0
 
 "
 " Vimrc
@@ -175,11 +176,9 @@ set diffopt+=vertical
 
 " Color scheme
 set background=dark
-" if exists('+termguicolors')
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
-" endif
+if exists('+termguicolors')
+  set termguicolors
+endif
 colorscheme iceberg
 
 " Mute beep sound
