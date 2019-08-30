@@ -78,7 +78,7 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--extended --ansi --multi --height 40% --reverse --border"
 
 # fbr - checkout git branch
-fbr() {
+function fbr() {
   local branches branch
   branches=$(git branch -vv) &&
   branch=$(echo "$branches" | fzf +m) &&
@@ -86,10 +86,23 @@ fbr() {
 }
 
 # vv - search file and open with vim
-vv() {
+function vv() {
   files=$(git ls-files) &&
   selected_files=$(echo "$files" | fzf -m --preview 'head -100 {}') &&
   vim $selected_files
+}
+
+# ghq-cd - change directory using ghq and fzf
+function ghq-cd() {
+  repo_path=$(ghq list --full-path | fzf)
+  cd $repo_path
+}
+
+# ghq-hub - browse remote repository using ghq and fzf
+function ghq-hub() {
+  repo_path=$(ghq list --full-path | fzf)
+  repo_name=${repo_path##*github.com/}
+  hub browse $repo_name
 }
 #================================================================
 #                    Zplug
