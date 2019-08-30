@@ -15,3 +15,7 @@ alias s="rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# Docker
+alias dk="docker"
+alias dkc="docker-compose"
