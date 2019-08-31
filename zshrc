@@ -93,7 +93,7 @@ function vv() {
 }
 
 # ghq-cd - change directory using ghq and fzf
-function ghq-cd() {
+function gcd() {
   repo_path=$(ghq list --full-path | fzf)
   cd $repo_path
 }
