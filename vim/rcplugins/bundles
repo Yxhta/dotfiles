@@ -1,10 +1,9 @@
 " Bundles.vim
 
 "call plug#begin('~/.vim/bundle')
-" Plug 'christoomey/vim-run-interactive'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'elixir-lang/vim-elixir'
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
 " Plug 'pangloss/vim-javascript'
 Plug 'stanangeloff/php.vim'
@@ -26,8 +25,9 @@ Plug 'jparise/vim-graphql'
 "Plug 'mxw/vim-jsx'
 Plug 'cocopon/iceberg.vim'
 Plug 'w0ng/vim-hybrid'
+Plug 'mhartington/oceanic-next'
 Plug 'whatyouhide/vim-gotham'
-"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'

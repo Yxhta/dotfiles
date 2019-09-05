@@ -176,7 +176,7 @@ set diffopt+=vertical
 
 " Color scheme
 set background=dark
-if exists('+termguicolors')
+if (has('termguicolors'))
   set termguicolors
 endif
 colorscheme iceberg
