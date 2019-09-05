@@ -38,6 +38,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'othree/yajs.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jwalton512/vim-blade'
+Plug 'joshdick/onedark.vim'
 "call plug#end()
 
 " vim:ft=vim
