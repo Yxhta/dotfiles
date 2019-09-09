@@ -1,0 +1,10 @@
+" Colorscheme
+
+Plug 'cocopon/iceberg.vim'
+Plug 'w0ng/vim-hybrid'
+Plug 'mhartington/oceanic-next'
+Plug 'whatyouhide/vim-gotham'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
+
+" vim:ft=vim

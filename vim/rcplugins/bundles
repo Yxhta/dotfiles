@@ -1,44 +1,21 @@
 " Bundles.vim
 
-"call plug#begin('~/.vim/bundle')
-" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
-" Plug 'pangloss/vim-javascript'
-Plug 'stanangeloff/php.vim'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 Plug 'jparise/vim-graphql'
-"Plug 'mxw/vim-jsx'
-Plug 'cocopon/iceberg.vim'
-Plug 'w0ng/vim-hybrid'
-Plug 'mhartington/oceanic-next'
-Plug 'whatyouhide/vim-gotham'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'editorconfig/editorconfig-vim'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'othree/yajs.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'jwalton512/vim-blade'
-Plug 'joshdick/onedark.vim'
-"call plug#end()
 
 " vim:ft=vim

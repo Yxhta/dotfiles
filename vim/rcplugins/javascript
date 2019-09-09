@@ -1,0 +1,10 @@
+" Javascript
+
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+
+Plug 'othree/yajs.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" vim:ft=vim
