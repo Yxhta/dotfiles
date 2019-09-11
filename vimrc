@@ -175,11 +175,21 @@ set complete+=kspell
 set diffopt+=vertical
 
 " Color scheme
+colorscheme space-vim-dark
 set background=dark
 if (has('termguicolors'))
   set termguicolors
 endif
-colorscheme iceberg
+hi LineNr ctermbg=NONE guibg=NONE
+
+augroup TransparentBG
+   autocmd!
+ autocmd Colorscheme * highlight Normal ctermbg=none
+ autocmd Colorscheme * highlight NonText ctermbg=none
+ autocmd Colorscheme * highlight LineNr ctermbg=none
+ autocmd Colorscheme * highlight Folded ctermbg=none
+ autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
+augroup END
 
 " Mute beep sound
 set belloff=all
