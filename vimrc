@@ -175,15 +175,15 @@ set complete+=kspell
 set diffopt+=vertical
 
 " Color scheme
-colorscheme space-vim-dark
 set background=dark
+colorscheme iceberg 
 if (has('termguicolors'))
   set termguicolors
 endif
 hi LineNr ctermbg=NONE guibg=NONE
 
 augroup TransparentBG
-   autocmd!
+ autocmd!
  autocmd Colorscheme * highlight Normal ctermbg=none
  autocmd Colorscheme * highlight NonText ctermbg=none
  autocmd Colorscheme * highlight LineNr ctermbg=none
