@@ -1,3 +1,6 @@
+#================================================================
+#
+#================================================================
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -43,7 +46,7 @@ _load_settings "$HOME/.zsh/configs"
 set IGNOREEOF
 
 export PATH="$HOME/.bin:$PATH"
-export PATH=~/.composer/vendor/bin:$PATH
+# export PATH=~/.composer/vendor/bin:$PATH
 export ZSH=$HOME/.dotfiles
 
 # Language must be en_US
