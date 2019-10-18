@@ -212,3 +212,7 @@ nnoremap <leader>h :History<CR>
 " clipboard
 set clipboard+=unnamed
 
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
