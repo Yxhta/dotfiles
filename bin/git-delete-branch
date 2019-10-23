@@ -1,7 +1,16 @@
-#!/bin/sh
+#!/bin/zsh
 
-set -ex
+set -e
 
-git branch | grep -v 'master' | xargs git branch -d
+git branch | grep -v 'master'
+
+echo "\nAre you sure? (y/N): "
+
+if read -q; then
+  git branch | grep -v 'master' | xargs git branch -d
+else
+  echo "\nabort."
+fi
+# git branch | grep -v 'master' | xargs git branch -d
 # git push origin :refs/heads/"$1"
 # git branch --delete "$1"
