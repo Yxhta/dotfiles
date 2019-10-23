@@ -37,6 +37,12 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/ito/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/ito/google-cloud-sdk/completion.zsh.inc'
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
@@ -106,6 +112,25 @@ function ghq-hub() {
   repo_path=$(ghq list --full-path | fzf)
   repo_name=${repo_path##*github.com/}
   hub browse $repo_name
+}
+
+# fzf-git-add - make git add more interactively
+function fadd() {
+  local out q n addfiles
+  while out=$(
+      git status --short |
+      awk '{if (substr($0,2,1) !~ / /) print $2}' |
+      fzf-tmux --multi --exit-0 --expect=ctrl-d); do
+    q=$(head -1 <<< "$out")
+    n=$[$(wc -l <<< "$out") - 1]
+    addfiles=(`echo $(tail "-$n" <<< "$out")`)
+    [[ -z "$addfiles" ]] && continue
+    if [ "$q" = ctrl-d ]; then
+      git diff --color=always $addfiles | less -R
+    else
+      git add $addfiles
+    fi
+  done
 }
 #================================================================
 #                    Zplug
