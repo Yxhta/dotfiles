@@ -216,3 +216,9 @@ set clipboard+=unnamed
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" persisten undo
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
