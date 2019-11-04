@@ -37,12 +37,6 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/ito/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables bash completion for gcloud.
-source '/Users/ito/google-cloud-sdk/completion.zsh.inc'
-
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
@@ -52,8 +46,8 @@ source '/Users/ito/google-cloud-sdk/completion.zsh.inc'
 set IGNOREEOF
 
 export PATH="$HOME/.bin:$PATH"
-# export PATH=~/.composer/vendor/bin:$PATH
 export ZSH=$HOME/.dotfiles
+# export PATH=~/.composer/vendor/bin:$PATH
 
 # Language must be en_US
 export LANGUAGE=en_US.UTF-8
@@ -155,3 +149,9 @@ fi
 # Then, source plugins and add commands to $PATH
 # zplug load --verbose
 zplug load >/dev/null
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/google-cloud-sdk/path.zsh.inc' ]; then . '/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/google-cloud-sdk/completion.zsh.inc' ]; then . '/google-cloud-sdk/completion.zsh.inc'; fi
