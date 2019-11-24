@@ -209,6 +209,9 @@ nnoremap <leader>o :Files<CR>
 nnoremap <leader>b :Buffer<CR>
 nnoremap <leader>h :History<CR>
 
+" lsp
+nnoremap <leader>[ :LspDefinition<CR>
+
 " clipboard
 set clipboard+=unnamed
 
