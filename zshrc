@@ -92,7 +92,7 @@ function fbr() {
 function vv() {
   files=$(git ls-files) &&
   selected_files=$(echo "$files" | fzf -m --preview 'head -100 {}') &&
-  vim $selected_files
+  nvim $selected_files
 }
 
 # ghq-cd - change directory using ghq and fzf
