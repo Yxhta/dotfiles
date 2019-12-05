@@ -1,5 +1,17 @@
 set encoding=utf-8
 
+" NVIM settings
+let $XDG_VIM_HOME = $HOME.'/.config/vim'
+
+set runtimepath+=$XDG_VIM_HOME
+set runtimepath+=$XDG_VIM_HOME/after
+
+runtime! init/*.vim
+runtime! functions.vim
+
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Leader
 let mapleader = " "
 
