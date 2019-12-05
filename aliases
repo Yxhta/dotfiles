@@ -7,6 +7,7 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias lg="lazygit"
 alias n='nvim'
+alias vi='nvim'
 
 # Bundler
 alias b="bundle"
