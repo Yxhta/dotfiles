@@ -1,17 +1,8 @@
-" Javascript
+" Javascript(Typescript)
 
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
-
-" Plug 'othree/yajs.vim'
-" Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'mxw/vim-jsx'
-let g:jsx_ext_required = 0
-
-Plug 'chemzqm/vim-jsx-improve', { 'for': 'javascript.jsx' }
-
-autocmd BufEnter *.es6 setf javascript
-
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " vim:ft=vim
