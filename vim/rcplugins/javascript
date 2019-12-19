@@ -1,14 +1,15 @@
 " Javascript(Typescript)
 
 " Plug 'yuezk/vim-js'
-Plug 'neovim/node-host', { 'do': 'npm install' }
-Plug 'billyvg/tigris.nvim', { 'do': './install.sh' }
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'neovim/node-host', { 'do': 'npm install' }
+" Plug 'billyvg/tigris.nvim', { 'do': './install.sh' }
+" Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-let g:tigris#enabled = 1
-let g:tigris#on_the_fly_enabled = 1
-let g:tigris#delay = 1
+" let g:tigris#enabled = 1
+" let g:tigris#on_the_fly_enabled = 1
+" let g:tigris#delay = 1
 
 " vim:ft=vim
