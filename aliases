@@ -8,6 +8,7 @@ alias v="$VISUAL"
 alias lg="lazygit"
 alias n='nvim'
 alias vi='nvim'
+alias daily='$EDITOR ~/daily.md'
 
 # Bundler
 alias b="bundle"
