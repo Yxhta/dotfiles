@@ -12,6 +12,8 @@ runtime! functions.vim
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
 " Leader
 let mapleader = " "
 
@@ -82,6 +84,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile gitconfig.local set filetype=gitconfig
   autocmd BufRead,BufNewFile tmux.conf.local set filetype=tmux
   autocmd BufRead,BufNewFile vimrc.local set filetype=vim
+  " autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible

@@ -3,15 +3,15 @@
 Plug 'itchyny/lightline.vim'
 
 " Show coc.nvim status
-let g:lightline = {
-  \'active': {
-    \'right': [
-      \['coc']
-    \]
-  \},
-  \'component_function': {
-    \'coc': 'coc#status'
-  \}
-\}
+" let g:lightline = {
+"   \'active': {
+"     \'right': [
+"       \['coc']
+"     \]
+"   \},
+"   \'component_function': {
+"     \'coc': 'coc#status'
+"   \}
+" \}
 
 " vim:ft=vim

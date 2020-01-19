@@ -3,3 +3,6 @@ export PATH="/usr/local/bin:$PATH"
 
 # Add my custom commands
 export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"
+
+export GOPATH=$HOME/go
