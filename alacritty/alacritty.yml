@@ -263,7 +263,7 @@ mouse:
   triple_click: {threshold: 300}
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: false
+  hide_when_typing: true
 
   url:
     # URL launcher
@@ -324,6 +324,10 @@ live_config_reload: true
 #  program: /bin/bash
 #  args:
 #    - --login
+shell:
+  program: /usr/local/bin/tmux
+  args:
+    - -u # force UTF-8 in tmux
 
 # Windows 10 ConPTY backend (Windows only)
 #
