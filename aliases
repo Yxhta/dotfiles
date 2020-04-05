@@ -1,11 +1,12 @@
 # Unix
-alias ll='ls -l'
-alias la='ls -al'
+alias ll='exa -l'
+alias la='exa -al'
 alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias lg="lazygit"
+alias ldk="lazydocker"
 alias n='nvim'
 alias vi='nvim'
 alias daily='$EDITOR ~/daily.md'
