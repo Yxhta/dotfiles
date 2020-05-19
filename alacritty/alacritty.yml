@@ -10,7 +10,7 @@
 # each instance of Alacritty. If it is not present, alacritty will
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
-TERM: screen-256color
+# TERM: screen-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -79,7 +79,7 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Hack Nerd Font
+    family: hack
   # Font family
   #
   # Default:
@@ -92,7 +92,7 @@ font:
 
   # Bold font face
   bold:
-    family: Hack Nerd Font
+    family: hack
   # Font family
   #
   # If the bold family is not specified, it will fall back to the
@@ -103,7 +103,7 @@ font:
 
   # Italic font face
   italic:
-    family: Hack Nerd Font
+    family: hack
   # Font family
   #
   # If the italic family is not specified, it will fall back to the
