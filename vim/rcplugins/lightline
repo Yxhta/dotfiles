@@ -1,9 +1,8 @@
 " StatusLine
 
-" Plug 'itchyny/lightline.vim'
-Plug 'taigacute/spaceline.vim'
+Plug 'itchyny/lightline.vim'
 
-let g:spaceline_line_symbol = 0
+" let g:spaceline_line_symbol = 0
 " Show coc.nvim status
 " let g:lightline = {
 "   \'active': {
